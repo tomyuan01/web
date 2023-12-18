@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+	<title>產品介紹</title>
+
+	<style>
+		@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+		*{
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			font-family: 'Noto Sans TC',sans-serif;
+		}
+        body{
+			background-image: linear-gradient(90deg,#c97064,#bca371);
+            
+		}
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+        <!--介紹-->
+        .neck-banner{
+            width: 100%;
+            height: 700px;
+            background-color: #ccc;
+            background: 
+                linear-gradient(115deg,#7b5 50%,transparent 50%) center center / 100%,
+                url("https://picsum.photos/1200/600?random=1") right center / auto 100%;
+        }
+        .neck-banner .container{
+            width: 100%;
+            height: 100%;
+            margin: auto;
+        }
+        .neck-banner .txt{
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        .neck-banner .txt h1{
+            font-size: 80px;
+            border-bottom: 1px solid #333;
+            font-weight: 900px;
+            padding-bottom: .3em;
+            margin-bottom: .3em;
+        }
+        .neck-banner .txt small{
+            display: block;
+            font-size: 53px;
+            font-weight: 700px;
+        }
+        .neck-banner .txt h2{
+            font-size: 50px;
+            font-weight: 700px;
+        }
+        .neck-banner .txt p{
+            font-size: 30px;
+            font-weight: 300px;
+        }
+        <!--水果介紹-->
+        .fruit-wrap{
+            width: 1200px;
+            display: flex;
+            margin: auto;
+            padding-bottom: 60px;
+        }
+        .fruit-wrap .card{
+            width: 368px;
+            margin: 15px;
+            text-align: center;
+            background-color: lightblue;
+            border: 1px solid #ccc;
+            transform: translateY(0px);
+            transition: .3s;
+        }
+        .fruit-wrap .card img{
+            width: 100%;
+            vertical-align: middle;
+        }
+        .fruit-wrap .card h2{
+            border-bottom: 1px solid #888;
+            padding-bottom: .3em;
+            margin-bottom: .4em;
+            font-weight: 900;
+        }
+        .fruit-wrap .card p{
+            line-height: 1.5;
+            font-weight: 300;
+        }
+        .fruit-wrap .card .txt{
+            padding: 20px;
+            position: relative;
+        }
+        .fruit-wrap .card .txt::before{
+            content:'';
+            position: absolute;
+            width: 0;
+            height: 0;
+            left: 0;
+            top: 0;
+            border-top: 50px solid transparent;
+            border-left: 184px solid lightblue;
+            border-right: 184px solid lightblue;
+            transform: translateY(-100%);
+        }
+        .fruit-wrap .card:hover{
+            transform: translateY(-50px);
+        }
+        .fruit-wrap .card:hover .txt{
+            background-image: linear-gradient(0deg,#FB8076, #FEB85D);
+        }
+        .fruit-wrap .card:hover .txt::before{
+            border-left: 184px solid #FEB85D;
+            border-right: 184px solid #FEB85D;
+        }
+        <!--水果介紹-->
+        <!--數量優惠-->
+        <!--訂購資訊-->
+        .control-group{
+            display: middle;
+        }
+        <!--頁尾-->
+        .fotter{
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <!--標題-->
+    <nav class="navbar navbar-dark bg-dark" aria-label="First navbar example">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">我的網頁</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsExample01">
+                <ul class="navbar-nav me-auto mb-2">
+                    <li class="nav-item active">
+                        <a class="nav-link" aria-current="page" href="#">1.還沒想到</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">2.母災影</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">3.你不要問我</a>
+                    </li>
+                </ul>
+                
+            </div>
+        </div>
+    </nav>
+    <!--介紹-->
+    <div class="neck-banner">
+        <div class="container">
+            <div class="txt">
+                <h1>開發者
+                    <small>劉小元</small>
+                </h1>
+                <h2>
+                    劉家果園
+                </h2>
+                <p>
+                    坐落在高雄及屏東交界處<br>
+                    一年四季都有果樹，歡迎來體驗採果樂~
+                </p>
+            </div>
+        </div>
+    </div>
+    <!--左框框-->
+    <li class='span4'>
+        
+    </li>
+    <!--水果介紹-->
+    <li class='span8'>
+        <div class="fruit-wrap">
+            <div class="card" style="width: 18rem;">
+              <img src="D:\Download\banana.JPG" class="card-img-top" alt="banan">
+              <div class="card-body">
+                <p class="card-text">香蕉原產於熱帶的马来群岛及澳洲北部地區，最早可能是在巴布亞紐幾內亞馴化，未受人類馴化的野生蕉體型微小，難以打開果實且大部分為種子，與能剝開直接吃的食用蕉差異頗大，是人類以栽培的方式才獲得黃色香蕉。 至少有107個國家生產香蕉。</p>
+              </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+              <img src="D:\Download\papaya.JPG" class="card-img-top" alt="papaya">
+              <div class="card-body">
+                <p class="card-text">木瓜富含維生素B1與B2、維生素A、維生素C、木瓜酵素及多種礦物質，可預防感冒、幫助消化，對產後婦女來說，也有促進乳汁分泌的功用。 紅肉木瓜含大量的β胡蘿蔔素，算是天然的抗氧化劑，可以延緩衰老。 但食用木瓜需注意，因木瓜性質偏寒，體質虛弱、脾胃虛寒的人要特別留意。</p>
+              </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+              <img src="D:\Download\mango.JPG" class="card-img-top" alt="mango">
+              <div class="card-body">
+                <p class="card-text">台灣芒果的主要產地多位於南部，其中台南市玉井區更是被稱為「芒果之鄉」。</p>
+              </div>
+            </div>      
+        </div>
+    </li>
+    <!--數量優惠-->
+    <table class="table table-hover">
+        <thead>
+            <tr> 
+                <th>\</th>
+                <th>香蕉</th>
+                <th>木瓜</th>
+                <th>芒果</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1箱</td>
+                <td>40塊</td>
+                <td>35塊</td>
+                <td>50塊</td>
+            </tr>  
+            <tr>
+                <td>2箱</td>
+                <td>70塊</td>
+                <td>60塊</td>
+                <td>95塊</td>
+            </tr>        
+        </tbody>
+    </table>
+    <!--訂購資訊-->
+    <div>
+        <h3>訂購資訊</h3>
+        <div class='control-group'>
+            <label class='control-label'>輸入姓名:</label>
+            <input type="text" placeholder="劉XX">
+        </div>
+        <div class='control-group'>
+            <label class='control-label'>選擇性別:</label>
+            <input type="radio" value='男生' checked>男
+            <input type="radio" value='女生'>女
+        </div>
+        <div class='control-group'>
+            <label class='control-label'>輸入手機號碼:</label>
+            <input type="text" placeholder="09xx">
+        </div>
+        <div class='control-group'>
+            <label class='control-label'>輸入地址:</label>
+            <input type="text" placeholder="地球上的某個角落">
+        </div>
+        <div id="liveAlertPlaceholder"></div>
+        <button type="button" class="btn btn-primary" id="liveAlertBtn">按下我送出</button>
+    </div>
+
+</body>
+<footer>
+    <div class=footer>
+        <p>@copy 2021 yuan work</p>
+    </div>
+</footer>

@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+	<title>作品</title>
+
+	<style>
+		@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+		*{
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			font-family: 'Noto Sans TC',sans-serif;
+		}
+        body{
+			background-image: linear-gradient(90deg,#3d5894,#08c7a5);
+            
+		}
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+		.main-header{
+			background: linear-gradient(0deg,#fe70d8,#3713c1);			
+		}
+		.main-header .container{
+			display:flex;
+			padding: 20px;
+			margin:auto;
+			align-items: center;
+		}
+		.main-header .LOGO{
+			width: 100px;
+		}
+		.main-header .LOGO img{
+			width: 100%;
+			vertical-align: middle;
+		}
+		.main-header .main{
+			margin: auto;
+		}
+		.main-header .main a{
+			color: #fff;
+			padding: 5px 10px;
+			position: relative;
+		}
+		.main-header .main a::after{
+			content: '';
+			position: absolute;
+			left: 50%;
+			right: 50%;
+			bottom: -5px;
+			height: 0;
+			border-bottom: 1px solid #fff;
+			transition: .3s;
+		}
+		.main-header .main a:hover::after{
+			left: 0%;
+			right: 0%;
+		}
+		.main-header .headrer-search{
+			display: flex;
+		}
+		.main-header .headrer-search button,
+		.main-header .headrer-search input{
+			border: none;
+			background-color: #fff;
+			padding: 5px 10px;
+		}
+		.main-header .headrer-search button:focus,
+		.main-header .headrer-search inputfocus{
+			outline: none;
+		}
+		.main-header .headrer-search button{
+			border-radius:0 200px 200px 0;
+		}
+		.main-header .headrer-search input{
+			border-radius:200px 0 0 200px;
+		}
+		/*導覽列*/
+
+
+		.neck-banner{
+			width: 100%;
+			height: 700px;
+			background-color: #ccc;
+			background: 
+				linear-gradient(115deg,#7b5 50%,transparent 50%) center center / 100%,
+				url("https://picsum.photos/1200/600?random=1") right center / auto 100%;
+		}
+		.neck-banner .container{
+			width: 100%;
+			height: 100%;
+			margin: auto;
+		}
+		.neck-banner .txt{
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: flex-start;
+		}
+		.neck-banner .txt h1{
+			font-size: 80px;
+			border-bottom: 1px solid #333;
+			font-weight: 900px;
+			padding-bottom: .3em;
+			margin-bottom: .3em;
+		}
+		.neck-banner .txt small{
+			display: block;
+			font-size: 53px;
+			font-weight: 700px;
+		}
+		.neck-banner .txt h2{
+			font-size: 50px;
+			font-weight: 700px;
+		}
+		.neck-banner .txt p{
+			font-size: 30px;
+			font-weight: 300px;
+		}
+
+		/*開頭*/
+		.list{
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			padding-bottom: 60px;
+		}
+		.list li{
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			text-align: center;
+			width: 200px;
+			height: 200px;
+			background-image: linear-gradient(9deg,#185a9d,#43cea2);
+			color:#fff;
+			border-radius:50%;
+			position: relative;
+			font-size: 25px;
+			box-shadow:0px 0px 0px 4px #fff;
+		}
+		.list li .fa{
+			font-size: 60px;
+			margin-left: 6px;
+		}
+		.list li + li{
+			margin-left: 100px;
+		}	
+		.list li + li::before{
+			content:'';
+			position: absolute;
+			width: 100px;
+			height: 5px;
+			background-color: #43cea2;
+			z-index: -1;
+			box-shadow: 0px 0px 0px 3px #fff;
+			top: 0;
+			bottom: 0;
+			left: -100px;
+			margin: auto;
+
+		}
+		.list li.active ~ li{
+			background-image: linear-gradient(9deg,#999,#ccc);
+		}
+		.list li.active ~ li::before{
+			background-color: #999;
+		}
+		/*進度條*/
+
+
+		.person-wrap{
+			width: 1200px;
+			display: flex;
+			margin: auto;
+			padding-bottom: 60px;
+		}
+		.person-wrap .item{
+			width: 368px;
+			margin: 15px;
+			text-align: center;
+			background-color: lightblue;
+			border: 1px solid #ccc;
+			transform: translateY(0px);
+			transition: .3s;
+		}
+		.person-wrap .item img{
+			width: 100%;
+			vertical-align: middle;
+		}
+		.person-wrap .item h2{
+			border-bottom: 1px solid #888;
+			padding-bottom: .3em;
+			margin-bottom: .4em;
+			font-weight: 900;
+		}
+		.person-wrap .item p{
+			line-height: 1.5;
+			font-weight: 300;
+		}
+		.person-wrap .item .txt{
+			padding: 20px;
+			position: relative;
+		}
+		.person-wrap .item .txt::before{
+			content:'';
+			position: absolute;
+			width: 0;
+			height: 0;
+			left: 0;
+			top: 0;
+			border-top: 50px solid transparent;
+			border-left: 184px solid lightblue;
+			border-right: 184px solid lightblue;
+			transform: translateY(-100%);
+		}
+		.person-wrap .item:hover{
+			transform: translateY(-50px);
+		}
+		.person-wrap .item:hover .txt{
+			background-image: linear-gradient(0deg,#FB8076, #FEB85D);
+		}
+		.person-wrap .item:hover .txt::before{
+			border-left: 184px solid #FEB85D;
+			border-right: 184px solid #FEB85D;
+		}
+		/*人員介紹*/
+
+
+		.row-wrap{
+			display: flex;
+			align-items: center;
+			background: linear-gradient(-30deg,#fdaecb, #fe8556);
+			padding-bottom: 60px;
+		}
+		.row-wrap .container{
+			width: 1200px;
+			margin: auto;
+			display: flex;
+			flex-wrap: wrap;
+		}
+		.row-wrap .item{
+			width: 350px;
+			margin: 15px;
+			display: flex;
+			background-color: #fff;
+			border: 1px solid #888;
+			box-shadow: 0 10px 30px rgba(160,0,0,.5);
+		}
+		.row-wrap .item .pic{
+			width: 50%;
+		}
+		.row-wrap .item .pic img{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		.row-wrap .item .txt{
+			width: 50%;
+			padding: 20px;
+			background-size: border-box;
+			display: flex;
+			flex-direction: column;
+		}
+		.row-wrap .item .txt h2{
+			font-weight: 500;
+			margin-bottom: 4px;
+		}
+		.row-wrap .item .txt p{
+			font-weight: 300;
+		}
+		.row-wrap .item .txt .btn{
+			line-height: 1.5em;
+			border: 1px solid #ccc;
+			padding: 0 1em;
+			align-self: flex-end;
+			text-decoration: none;
+			border-radius: 200px;
+			margin-top: auto;
+			color: #aaa;
+		}
+		.row-wrap .item .txt .btn:hover{
+			background-color: #ccc;
+			color: #fff;
+		}
+		/*橫式版面*/
+
+
+		.poga-wrap{
+			display: flex;
+			width: 1200px;
+			margin: 100px auto;
+			padding-top: 75px;
+		}
+		.poga-wrap .item{
+			width: 370px;
+			margin: 0 15px;
+			text-align: center;
+			border: 10px solid #f9cec2;
+			background-color: #fa0;
+			border-radius: 20px;
+			box-shadow: 10px 20px 50px #f7b6a7;
+		}
+		.poga-wrap .item h3{
+			color: pink;
+		}
+		.poga-wrap .item p{
+			color: blue;
+		}
+		.poga-wrap .item .icon{
+			width: 150px;
+			height: 150px;
+			background-color: #fa0;
+			margin: -75px auto 0;
+			font-size: 65px;
+			line-height: 150px;
+			border-radius: 50%;
+			position: relative;
+		}
+		.poga-wrap .item .icon::before{
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			border-top: 10px solid #f9cec2;
+			border-right: 10px solid #f9cec2;
+			border-bottom: 10px solid transparent;
+			border-left: 10px solid transparent;
+			left: -10px;/*扣掉邊框線*/
+			top: -10px;/*扣掉邊框線*/
+			border-radius: 50%;
+			transform: rotate(-45deg);
+		}
+		.poga-wrap .item:hover .icon{
+			animation: ss .3s linear infinite alternate;
+		}
+		.poga-wrap .item .txt{
+			padding: 20px 20px 2em;
+		}
+		@keyframes ss{
+			0%{ transform: rotate(-10deg); }
+		  100%{ transform: rotate(10deg); }
+		}
+		/*破格式設計*/
+	</style>
+</head>
+<body>
+	<nav class="navbar navbar-dark bg-dark" aria-label="First navbar example">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">我的網頁</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsExample01">
+                <ul class="navbar-nav me-auto mb-2">
+                    <li class="nav-item active">
+                        <a class="nav-link" aria-current="page" href="Curriculum.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="table.html">Curriculum</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="work.html">Work</a>
+                    </li>
+                </ul>
+                
+            </div>
+        </div>
+    </nav>
+
+	<!-- 導覽列 -->
+	<header class="main-header">
+		<div class="container">
+			<a href="#" class="LOGO">
+				<img src="https://picsum.photos/300/300?random=5">
+			</a>
+			<nav class="main">
+				<a href="#1">開發者</a>
+				<a href="#2">個人資料</a>
+				<a href="#3">興趣</a>
+				<a href="#4">態度</a>
+			</nav>
+			<form class="header-search">
+				<input type="search" name="" id="">
+				<button>
+					<i class="fa fa-search" aria-hidden="true"></i>
+				</button>
+			</form>
+		</div>		
+	</header>
+
+
+	<!-- 開頭 -->
+	<div id="1"></div>
+	<div class="neck-banner">
+		<div class="container">
+			<div class="txt">
+				<h1>開發者
+					<small>劉小元</small>
+				</h1>
+				<h2>
+					靜宜大學
+				</h2>
+				<p>
+					資工四年級<br>
+					網頁初學者~
+				</p>
+			</div>
+		</div>
+	</div>
+
+
+
+	<!-- 人員介紹 -->
+	<div id="2"></div>
+	<div class="person-wrap">
+		<div class="item">
+			<img src="https://picsum.photos/300/300?random=1">
+			<div class="txt">				
+				<h2>居住地</h2>
+				<p>高雄</p>
+			</div>
+		</div>
+		<div class="item">
+			<img src="https://picsum.photos/300/300?random=2">
+			<div class="txt">
+				<h2>最想去的城市</h2>
+				<p>紐約</p>
+			</div>			
+		</div>
+		<div class="item">
+			<img src="https://picsum.photos/300/300?random=3">
+			<div class="txt">
+				<h2>最想做的事</h2>
+				<p>機車環島</p>
+			</div>			
+		</div>
+	</div>
+
+
+	<!-- 進度條 -->
+	<ol class="list">
+		<li>
+			<i class="fa fa-bell" aria-hidden="true"></i>
+			出生
+		</li>
+		<li>
+			<i class="fa fa-archive" aria-hidden="true"></i>
+			學習
+		</li>
+		<li>
+			<i class="fa fa-truck" aria-hidden="true"></i>
+			工作
+		</li>
+		<li>
+			<i class="fa fa-check-circle" aria-hidden="true"></i>
+			找上帝、佛祖
+		</li>
+	</ol>
+
+
+
+	<!-- 橫式版面 -->
+	<div id="3"></div>
+	<div class="row-wrap">
+		<div class="container">
+			<div class="item">
+				<div class="pic">
+					<img src="https://picsum.photos/300/300?random=1">
+				</div>
+				<div class="txt">
+					<h2>電影</h2>
+					<p>恐怖、動作、經典</p>
+					<a href="#" class="btn">more</a>
+				</div>
+			</div>
+			<div class="item">
+				<div class="pic">
+					<img src="https://picsum.photos/300/300?random=2">
+				</div>
+				<div class="txt">
+					<h2>音樂</h2>
+					<p>都聽</p>
+					<a href="#" class="btn">more</a>
+				</div>
+			</div>
+			<div class="item">
+				<div class="pic">
+					<img src="https://picsum.photos/300/300?random=3">
+				</div>
+				<div class="txt">
+					<h2>運動</h2>
+					<p>球類運動、游泳、健身房</p>
+					<a href="#" class="btn">more</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- 破格式設計 -->
+	<div id="4"></div>
+	<div class="poga-wrap">
+		<div class="item">
+			<div class="icon">
+				<i class="fa fa-gavel"></i>
+			</div>
+			<div class="txt">
+				<h3>Study</h3>
+				<p>不想被拋下就要學習</p>
+			</div>
+		</div>
+		<div class="item">
+			<div class="icon">
+				<i class="fa fa-thumbs-up"></i>
+			</div>
+			<div class="txt">
+				<h3>Wish</h3>
+				<p>有得吃、有錢花、睡到自然醒</p>
+			</div>
+		</div>
+		<div class="item">
+			<div class="icon">
+				<i class="fa fa-bell"></i>
+			</div>
+			<div class="txt">
+				<h3>Attitude</h3>
+				<p>每件事情都要盡全力去做</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
